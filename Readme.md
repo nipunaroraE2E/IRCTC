@@ -105,7 +105,7 @@ DB_PASSWORD=""
 DB_NAME=IRCTC
 JWT_SECRET="WorkIndia IRCTC"  
 ADMIN_TOKEN="Insert Token"
-
+```
 
 ## Handling Race Conditions
 
