@@ -82,3 +82,24 @@ CREATE TABLE bookings (
 
 
 
+## Postman API Collection
+
+You can use the following Postman API collection to run and test the APIs:
+
+[IRCTC Personal Project API Collection](https://www.postman.com/node-api-team/irctc-workindia-public/collection/65z1jup/irctc-personal-project)
+
+### Configuration
+
+Before running the APIs, make sure to set the following environment variables in Postman:
+
+- **ADMIN_TOKEN**: Change this token to set the admin; otherwise, access will be denied.
+- **JWT_Token**: Set this token as per your needs.
+
+### Environment Variables
+```plaintext
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=""
+DB_NAME=IRCTC
+JWT_SECRET="WorkIndia IRCTC"  
+ADMIN_TOKEN="Insert Token"
