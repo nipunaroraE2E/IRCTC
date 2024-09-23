@@ -105,3 +105,22 @@ DB_PASSWORD=""
 DB_NAME=IRCTC
 JWT_SECRET="WorkIndia IRCTC"  
 ADMIN_TOKEN="Insert Token"
+
+
+## Handling Race Conditions
+
+To ensure data integrity and handle race conditions during seat bookings, the application utilizes transaction methods. This approach allows the system to roll back changes if multiple users attempt to book the same ticket simultaneously. This ensures that only one booking is processed successfully.
+
+## Mandatory Requirements
+
+The following mandatory requirements have been implemented in the project:
+
+1. **Admin API Key**: 
+   - The admin API key is securely stored in the `.env` file, ensuring that only the admin has access to sensitive operations.
+   - To authorize as an admin, the API key must be passed in the request header as `x-admin-token`. This key is also used in the Postman API collection.
+
+2. **User-Specific Access**:
+   - Each user can only access their own bookings and seats. An authorization token is required for users to interact with their bookings.
+
+3. **Booking Token Requirement**:
+   - To book a seat, users must provide an authorization token. This ensures that only authenticated users can make bookings.
