@@ -42,6 +42,7 @@ This project uses a MySQL database set up on your local computer.
 After starting your MySQL server, you can create the required tables using the following commands:
 
 #### Users Table
+
 ```sql
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -80,6 +81,7 @@ CREATE TABLE bookings (
     FOREIGN KEY (train_id) REFERENCES Train(id) ON DELETE CASCADE
 );
 
+```
 
 
 ## Postman API Collection
